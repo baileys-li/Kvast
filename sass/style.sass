@@ -6,6 +6,7 @@
 html
     -webkit-box-sizing: border-box
     box-sizing: border-box
+    scroll-behavior: smooth
 
 body
     min-width: 1200px
@@ -28,6 +29,54 @@ a
         color: #6a3900
     &:active
         color: rgba(106, 57, 0, 0.5)
+
+label
+    font-weight: bold
+    line-height: 1.25
+    color: rgb(0, 0, 0)
+    text-transform: uppercase
+
+input,
+select,
+textarea
+    min-height: 51px
+    padding: 12px 20px
+
+    font-weight: bold
+    text-transform: uppercase
+
+    background-color: rgba(0, 0, 0, 0.1)
+    border: none
+
+    &:hover
+        background-color: rgba(0, 0, 0, 0.2)
+    &:active,
+    &:focus
+        background-color: #fff
+
+select
+    appearance: none
+    padding: 17px 20px
+    background-image: url(../img/dropdown-icon.png)
+    background-repeat: no-repeat
+    background-position: right 11px center
+
+.custom-checkbox
+    display: inline-block
+    width: 36px
+    height: 36px
+    background-color: rgba(0, 0, 0, 0.1)
+    cursor: pointer
+    &:hover
+        background-color: rgba(0, 0, 0, 0.2)
+
+input.visually-hidden:checked ~ .custom-checkbox
+    background-image: url(../img/check.png)
+    background-repeat: no-repeat
+    background-position: center
+
+input.visually-hidden:focus ~ .custom-checkbox
+    box-shadow: 0 0 0 2px #6a3900
 
 .container
     width: 800px
@@ -88,6 +137,20 @@ a
         &:focus
             color: rgba(255, 255, 255, 0.5)
             background-color: #8f8a81
+
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden
+    position: absolute
+    width: 1px
+    height: 1px
+    margin: -1px
+    border: 0
+    padding: 0
+
+    white-space: nowrap
+
+    clip-path: inset(100%)
+    clip: rect(0 0 0 0)
+    overflow: hidden
 
 @import includes/header
 @import includes/new-items

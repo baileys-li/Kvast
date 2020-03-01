@@ -1,0 +1,39 @@
+section.order#order
+    .container
+        h2.order__title.title Заказать
+
+        p.order__tip Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.
+
+        form(action="", method="get").order__form
+
+            .order__wrapper
+                label Представьтесь:
+                    input(type="text")
+            .order__wrapper.order__phone
+                label Номер телефона:
+                    input(type="tel", name="phone", pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}")
+
+            .order__wrapper.order__phone
+                label Доп. номер:
+                    input(type="tel", name="phone-ext", pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}")
+
+            .order__wrapper
+                label Email:
+                    input(type="email", name="email")
+
+            .order__wrapper
+                label Объём заказа: <br />
+                    select#value(name="value")
+                        option(value="1") От 5 до 10 баррелей в неделю
+            .order__wrapper
+                label Доп. комментарий:
+                    textarea(name="text")#text
+            .order__wrapper
+                label.order__newsletter
+                    input(type="checkbox" checked).visually-hidden
+                    span.custom-checkbox
+                    |  Я согласен получать квасную рассылку
+
+            button(type="submit").button.button--primary Отправить заказ
+
+
