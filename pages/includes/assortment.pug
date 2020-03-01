@@ -1,0 +1,39 @@
+- var classic = {name: "Классика", alcohol: "< 1,2%", kcal: 33, volume: "330 мл", cost: 120};
+- var sabbat = {name: "Шабаш", alcohol: "> 1,2%", kcal: 45, volume: "330 мл", cost: 250};
+- var watchman = {name: "Вахтёр", alcohol: "< 1%", kcal: 35, volume: "0,5 л", cost: 150, isNew: true};
+- var romantic = {name: "Романтик", alcohol: "< 0,5%", kcal: 27, volume: "0,5 л", cost: 90, isNew: true};
+
+
+mixin writeItemInTable(item)
+    -var className = ""
+    if item.isNew
+        - var className = "assortment--new";
+    tr(class= className)
+        if item.isNew
+            td(scope="row").assortment__name= item.name + " "
+                sup.assortment__new-tag Новинка
+        else
+            td(scope="row").assortment__name= item.name
+        td= item.alcohol
+        td= item.kcal
+        td= item.volume
+        td= item.cost + " Р."
+
+
+section.assortment
+    .container
+        h2.assortment__title.title Ассортимент
+
+        table.items-list
+            thead
+                tr
+                    th(scope="col") Название
+                    th(scope="col") Алк.
+                    th(scope="col") Ккал
+                    th(scope="col") Объём
+                    th(scope="col") Стоимость
+            tbody
+                +writeItemInTable(classic)
+                +writeItemInTable(sabbat)
+                +writeItemInTable(watchman)
+                +writeItemInTable(romantic)
