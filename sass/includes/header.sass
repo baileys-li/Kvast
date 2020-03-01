@@ -1,0 +1,54 @@
+.page-header
+    min-height: 550px
+    padding: 60px 0
+
+    color: #ffffff
+
+    background: #653c0f url(../img/wheat-back.jpg) bottom no-repeat
+    background-size: cover
+    &__slogan
+        margin: 120px 0 95px
+
+        font-weight: bold
+        font-size: 70px
+        line-height: 1
+        text-align: center
+
+.main-nav
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+.site-list
+    display: flex
+    justify-content: space-between
+    width: 600px
+    height: 59px
+    margin: 10px 0 0
+    padding: 0
+
+    list-style: none
+
+    border: 0 solid rgba(255, 255, 255, 0.2)
+    border-top-width: 1px
+    border-bottom-width: 1px
+
+    &__link
+        display: flex
+        align-items: center
+        height: 100%
+
+        font-weight: bold
+        line-height: 1
+        color: rgb(255, 255, 255)
+        text-transform: uppercase
+        text-decoration: none
+        &:hover,
+        &:focus
+            color: rgb(255, 203, 120)
+
+            border-bottom: 1px solid #ffffff
+        &:not([href])
+            color: rgba(255, 203, 120, 0.5)
+
+            border-bottom: 1px solid #ffffff
