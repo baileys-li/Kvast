@@ -1,0 +1,56 @@
+.advantages
+    padding: 79px 0 75px
+
+    background-color: #ffcb78
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        margin: 0
+        padding: 0
+
+        list-style: none
+
+        & li:nth-child(2)
+            display: flex
+            justify-content: center
+        & li:last-child
+            display: flex
+            justify-content: flex-end
+
+.advantage
+    display: flex
+    width: 214px
+    flex-direction: column
+    position: relative
+
+    &::before
+        height: 68px
+
+    &--brew::before
+        content: url("../img/icon-brew.png")
+    &--thumbsup::before
+        content: url("../img/icon-thumbsup.png")
+    &--matreshka::before
+        content: url("../img/icon-matreshka.png")
+
+    &__title
+        margin: 32px 0 3px
+
+        font-weight: bold
+        font-size: 20px
+        line-height: 1.5
+        color: #000000
+        text-transform: uppercase
+
+    &__text
+        max-width: 210px
+
+    &--brew::after,
+    &--matreshka::after
+        content: ""
+        position: absolute
+        background-color: #e5b66c
+        height: 230px
+        width: 1px
+        right: -92px
