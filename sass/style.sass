@@ -22,6 +22,13 @@ img
     max-width: 100%
     height: auto
 
+a
+    color: #834700
+    &:hover
+        color: #6a3900
+    &:active
+        color: rgba(106, 57, 0, 0.5)
+
 .container
     width: 800px
     margin-right: auto
@@ -40,29 +47,47 @@ img
 .button
     display: inline-block
     line-height: 1.25
-    // height: 50px
 
-    color: rgb(255, 255, 255)
     font-weight: bold
     text-transform: uppercase
-    background-color: #834700
-    border: 2px solid #834700
+
     text-decoration: none
     padding: 11px 20px 15px
-    &:hover
-        background-color: #6a3900
-        border: 2px solid #6a3900
-    &:active,
-    &:focus
-        color: rgba(255, 255, 255, 0.5)
 
-    &--info
+    &--primary
+        color: rgb(255, 255, 255)
+        background-color: #834700
+        border: 2px solid #834700
+        &:hover
+            color: rgb(255, 255, 255)
+            background-color: #6a3900
+            border: 2px solid #6a3900
+        &:active,
+        &:focus
+            color: rgba(255, 255, 255, 0.5)
+
+    &--ghost
         color: #834700
+        border: 2px solid #6a3900
         background-color: transparent
         &:hover
-            background-color: #transparent
+            background-color: transparent
             color: #6a3900
             border: 2px solid #6a3900
+        &:active,
+        &:focus
+            opacity: 0.5
+    &--ghost-grey
+        color: #bcb6ab
+        border: 2px solid #a6a097
+        background-color: transparent
+        &:hover
+            background-color: #a5a097
+            color: #fff
+        &:active,
+        &:focus
+            color: rgba(255, 255, 255, 0.5)
+            background-color: #8f8a81
 
 @import includes/header
 @import includes/new-items

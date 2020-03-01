@@ -1,0 +1,32 @@
+.review
+    background-color: #ede5d8
+    padding: 80px 0 90px
+    &__wrapper
+        margin: 0
+        padding: 0
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+
+    &__title
+        margin: 0 0 75px
+
+    &__text
+        margin: 0 0 35px
+        width: 86%
+        position: relative
+        &::before
+            position: absolute
+            content: url(../img/quotes.png)
+            top: 5px
+            left: -105px
+
+    &__source
+        font-size: 20px
+        font-weight: bold
+        text-transform: uppercase
+        color: rgb(0, 0, 0)
+        line-height: 1.5
+        font-style: normal
+        order: 1
