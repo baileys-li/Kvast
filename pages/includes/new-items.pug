@@ -1,0 +1,41 @@
+- var watchman = {name: "Вахтёр", alcohol: "< 1%", calories: "35", consist: "Ржаной хлеб, Вода, Солод, Соль", description: "Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня и придаст сил для вечерних приключений!", fileName: "bottle-left.jpg", price: 150}
+- var romantic = {name: "Романтик", alcohol: "< 0,5%", calories: "27", consist: "Ячменный хлеб, Вода, Солод, Апельсин", description: "Лёгкий и освежающий напиток поможет сохранять отличное настроение в течение всего дня.", fileName: "bottle-right.jpg", price: 90}
+
+
+mixin makeKvastCard(kvast)
+    article.kvast
+        h3.kvast__title.title= kvast.name
+        .kvast__info
+            table.kvast__table
+                tr
+                    td.kvast__characteristic Алк.
+                    td.kvast__value= kvast.alcohol
+                tr
+                    td.kvast__characteristic Ккал
+                    td.kvast__value= kvast.calories
+
+            p.kvast__consist= kvast.consist
+
+        img(src="./img/"+kvast.fileName, alt="Кваст «"+kvast.name+"»", wigth="319", height="459").kvast__pic
+
+        p.kvast__description= kvast.description
+
+        p.kvast__action
+            a(href="#").button.button--info Подробнее
+            |  
+            a(href="#").button.button--primary Купить
+            |  
+            b.kvast__price= kvast.price + " Р."
+
+
+section.new-items
+    .container
+
+        h2.new-items__title.title Новинки
+
+        .new-items__list
+            +makeKvastCard(watchman)
+            +makeKvastCard(romantic)
+
+
+

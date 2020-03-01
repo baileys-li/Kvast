@@ -1,0 +1,72 @@
+.new-items
+    padding: 80px 0 111px
+    &__list
+        display: grid
+
+        grid-template-columns: 1fr 1fr
+
+    &__title
+        margin: 0 0 75px
+    & article
+        border-right: 1px solid #e5e5e5
+        &:first-of-type
+            border-left: 1px solid #e5e5e5
+
+.kvast
+    position: relative
+
+    padding: 0 33px
+
+    &__title
+        margin: 0 0 10px
+    &__info
+        position: absolute
+        top: 85px
+        right: 0
+
+        width: 200px
+        padding: 0 25px
+    &__table
+        border-collapse: collapse
+
+        border: 1px solid #e5e5e5
+    &__characteristic,
+    &__value
+        padding: 5px 10px
+
+        font-weight: bold
+        color: rgb(0, 0, 0)
+        text-transform: uppercase
+
+        border: 1px solid #e5e5e5
+    &__characteristic
+        min-width: 77px
+    &__value
+        min-width: 72px
+
+    &__consist
+        margin-top: 11px
+
+        font-size: 14px
+        line-height: 1.714
+        color: rgb(68, 68, 68)
+
+    &__pic
+        margin-top: 29px
+        margin-bottom: 11px
+        margin-left: 10px
+
+    &__description
+        margin: 0 0 60px
+
+    & .button:first-of-type
+        margin-right: 4px
+
+    &__action
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0
+
+    &__price
+        margin-left: auto
