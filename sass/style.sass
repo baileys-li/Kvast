@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after
+    box-sizing: inherit
+
+html
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+body
+    min-width: 1200px
+
+    font-size: 16px
+    line-height: 1.875
+    font-family: "Arial"
+    color: rgb(68, 68, 68)
+
+    scroll-behavior: smooth
+
+img
+    display: block
+    max-width: 100%
+    height: auto
+
+.container
+    width: 800px
+    margin-right: auto
+    margin-left: auto
+
+.container--wide
+    width: 1015px
+
+.title
+    font-weight: bold
+    text-transform: uppercase
+    color: rgb(0, 0, 0)
+    line-height: 1.5
+    font-size: 40px
+
+.button
+    display: inline-block
+    line-height: 1.25
+    // height: 50px
+
+    color: rgb(255, 255, 255)
+    font-weight: bold
+    text-transform: uppercase
+    background-color: #834700
+    border: 2px solid #834700
+    text-decoration: none
+    padding: 11px 20px 15px
+    &:hover
+        background-color: #6a3900
+        border: 2px solid #6a3900
+    &:active,
+    &:focus
+        color: rgba(255, 255, 255, 0.5)
+
+    &--info
+        color: #834700
+        background-color: transparent
+        &:hover
+            background-color: #transparent
+            color: #6a3900
+            border: 2px solid #6a3900
+
+@import includes/header
+@import includes/new-items
+@import includes/advantages
+@import includes/history
+@import includes/review
+@import includes/assortment
+@import includes/order
+@import includes/footer
