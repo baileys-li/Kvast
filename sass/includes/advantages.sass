@@ -5,11 +5,12 @@
 
     &__list
         display: grid
-        grid-template-columns: repeat(3, 1fr)
         margin: 0
         padding: 0
 
         list-style: none
+
+        grid-template-columns: 306px 400px 1fr
 
         & li:nth-child(2)
             display: flex
@@ -17,12 +18,15 @@
         & li:last-child
             display: flex
             justify-content: flex-end
+        & li:not(:last-child)
+            border-right: 1px solid #e5b66c
 
 .advantage
-    display: flex
-    width: 214px
-    flex-direction: column
     position: relative
+
+    display: flex
+    flex-direction: column
+    width: 214px
 
     &::before
         height: 68px
@@ -45,12 +49,3 @@
 
     &__text
         max-width: 210px
-
-    &--brew::after,
-    &--matreshka::after
-        content: ""
-        position: absolute
-        background-color: #e5b66c
-        height: 230px
-        width: 1px
-        right: -92px
