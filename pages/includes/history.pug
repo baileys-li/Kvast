@@ -1,0 +1,16 @@
+mixin makeHistoryItem(title, link, imgName, text)
+    .history__wrapper
+        dt.history__columns
+            span.history__subtitle= title+" "
+            i.history__source= "Источник: "
+                a(href= link, target="_blank") ru.wikipedia.org
+        dd.history__columns
+            img(src="img/"+imgName, alt="Картинка с квасом", width="200", height="101").history__pic
+            p.history__text= text
+
+section.history
+    .container
+        h2.history__title.title Немного истории
+        dl
+            +makeHistoryItem("Происхождение кваса", "https://ru.wikipedia.org/wiki/Квас#История", "wiki-1.png", "Квас на Руси появился в X-XI веке. Само слово «квас» тоже имеет древнерусское происхождение. Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах, но называется он везде одинаково — квас.")
+            +makeHistoryItem("Классификация кваса", "https://ru.wikipedia.org/wiki/Квас#Классификация", "wiki-2.png", "По российскому ГОСТу для промышленного изготовления — это напиток с объёмной долей этилового спирта не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения сусла.")
