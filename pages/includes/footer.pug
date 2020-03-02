@@ -1,0 +1,25 @@
+footer.footer#bottom
+    .container.container--wide
+        .footer__wrapper
+            a(href="#bottom").footer__logo
+                img(src="img/logo.png", alt="Footer logo", width="140", height="76")
+
+            ul.site-list.footer__nav
+                each val, index  in navList
+                    li
+                        a(href="#"+index).site-list__link= val
+        .footer__wrapper
+            .footer__social
+                a(href="#").icon-button.icon-button--insta Инстаграм
+                |  
+                a(href="#").icon-button.icon-button--fb Фейсбук
+                |  
+                a(href="#").icon-button.icon-button--vk Вконтакте
+
+            p.footer__copyright При перепечатке материалов ссылка на сайт обязательна!
+
+            .footer__dev
+                a(href="https://htmlacademy.ru/courses/345").icon-button
+                    img(src="img/htmlacademy.png", alt="HTML Academy Logo", width="27", height="34")
+                b.footer__dev-label= "Разработчик: "
+                a(href="#") HTML Academy

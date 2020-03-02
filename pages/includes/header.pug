@@ -4,13 +4,8 @@ header.page-header#top
             a(href="#top")
                 img(src="./img/logo.png", alt="Квас «Кваст» логотип", width="140", height="76")
             ul.site-list
-                li
-                    a(href="#history").site-list__link История
-                li
-                    a(href="#advantages").site-list__link Производство
-                li
-                    a(href="#assortment").site-list__link Ассортимент
-                li
-                    a(href="#order").site-list__link Где купить
+                each val, index  in navList
+                    li
+                        a(href="#"+index).site-list__link= val
 
         p.page-header__slogan Крафтовый квас <br> всему голова!
